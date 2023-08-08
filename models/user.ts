@@ -2,7 +2,7 @@ import {DataTypes} from "sequelize";
 import db from "../db/connections";
 
 const User = db.define("user",{
-    user_id:{
+     id:{
         type: DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement: true
@@ -14,12 +14,13 @@ const User = db.define("user",{
         type: DataTypes.STRING
     },
     user_status:{
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
     },
 },
 {
     timestamps: false
-});
+}
+);
 
 
 export default User;

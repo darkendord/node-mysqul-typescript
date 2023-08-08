@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const connections_1 = __importDefault(require("../db/connections"));
 const User = connections_1.default.define("user", {
-    user_id: {
+    id: {
         type: sequelize_1.DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
@@ -18,7 +18,7 @@ const User = connections_1.default.define("user", {
         type: sequelize_1.DataTypes.STRING
     },
     user_status: {
-        type: sequelize_1.DataTypes.BOOLEAN
+        type: sequelize_1.DataTypes.BOOLEAN,
     },
 }, {
     timestamps: false
